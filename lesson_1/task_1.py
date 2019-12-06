@@ -1,0 +1,6 @@
+user_string =  input('введите что нибудь несколько знаков это будет строка: ')
+print(user_string)
+user_number_int =  int(input('введите целое число: '))
+print(user_number_int)
+user_number_float =  float(input('введите какое то число: '))
+print(user_number_float)
