@@ -110,5 +110,3 @@ for word in input_str:
     my_next_str.append(int_func(word))
 print(' '.join(my_next_str))
 
-
-
