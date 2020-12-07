@@ -10,10 +10,20 @@ print(user_number_float)
 #второе задание
 
 value = int(input('введите количество секунд: '))
-hours = value // 3600
-minutes = (value % 3600) // 60
-seconds = (value % 3600) % 60
-print(f'Выводим в формате чч:мм:сс, {hours}:{minutes}:{seconds}')
+def transform(number):
+    hours = value // 3600
+    if hours < 10:
+        hours = f'0{hours}'
+    minutes = (value % 3600) // 60
+    if minutes < 10:
+        minutes = f'0{minutes}'
+    seconds = (value % 3600) % 60
+    if seconds < 10:
+        seconds = f'0{seconds}'
+    str = f'{hours}:{minutes}:{seconds}'
+    return str
+
+print(transform(value))
 
 #третье задание
 
@@ -36,9 +46,9 @@ print(big_value)
 
 proceeds = int(input('введите выручку: '))
 costs = int(input('введите расходы: '))
-# workers = input('Численность предприятия: ')
+
 if proceeds > costs:
-    # print('у вас прибыль')
+    print('у вас прибыль')
     profit = proceeds - costs
     print(f'Ваша рентабильность выручки: {profit/proceeds}')
     workers = int(input('Численность работников: '))
